@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gilded Spoon - Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <header>
+            <h1>The Gilded Spoon</h1>
+            <p>Week 1 Prototype</p>
+        </header>
+
+        <main id="main-content">
+
+            <section id="inventory-panel" class="panel">
+                <h2>INVENTORY</h2>
+                <ul id="inventory-list">
+                    </ul>
+            </section>
+
+            <section id="kitchen-panel" class="panel">
+                <h2>THE KITCHEN</h2>
+                <div id="crafting-area">
+                    <h3>Selected Ingredients:</h3>
+                    <div id="crafting-slots" class="display-box">
+                        <p>Click ingredients from your inventory to add them here.</p>
+                    </div>
+                </div>
+                <div id="technique-area">
+                    <h3>Choose Technique:</h3>
+                    <div id="technique-buttons">
+                        <button id="btn-fry">Fry</button>
+                        <button id="btn-whisk">Whisk</button>
+                        <button id="btn-bake">Bake</button>
+                    </div>
+                </div>
+                 <button id="btn-clear">Clear Selection</button>
+            </section>
+
+            <section id="result-panel" class="panel">
+                <h2>RESULT</h2>
+                <div id="result-display" class="display-box">
+                    <p class="placeholder">Your creation will appear here...</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
