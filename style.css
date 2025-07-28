@@ -1,13 +1,13 @@
 /* Import the 8-bit font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* --- Base Styles & Variables --- */
+/* --- Base Styles & Variables (TAVERN PALETTE) --- */
 :root {
-    --bg-color: #1a1a2e; /* Dark blue-purple background */
-    --panel-bg: #16213e; /* Darker blue panel background */
-    --border-color: #e94560; /* Bright magenta for contrast */
-    --text-color: #f1f1f1; /* Off-white text */
-    --highlight-color: #fca311; /* Gold/yellow for highlights */
+    --bg-color: #2c211e; /* Dark wood background */
+    --panel-bg: #3b2d29; /* Slightly lighter wood panel background */
+    --border-color: #d97925; /* Rustic orange for borders and actions */
+    --text-color: #e0d6c5; /* Warm, creamy off-white text */
+    --highlight-color: #fca311; /* Gold for important text like the title */
     --font-main: 'Press Start 2P', cursive;
 }
 
@@ -28,6 +28,7 @@ body {
     border: 4px solid var(--border-color);
     background-color: var(--panel-bg);
     padding: 15px;
+    box-shadow: 0 0 20px #000; /* Adds a subtle outer glow to the game window */
 }
 
 header {
@@ -41,6 +42,7 @@ h1 {
     font-size: 2em;
     color: var(--highlight-color);
     margin: 0;
+    text-shadow: 2px 2px #000; /* Adds depth to the title */
 }
 
 h2 {
@@ -74,23 +76,23 @@ h2 {
 #inventory-list li {
     padding: 10px;
     margin-bottom: 5px;
-    background-color: #2e3b5e;
+    background-color: #4a3d38; /* Muted brown for list items */
     cursor: pointer;
     border: 2px solid transparent;
 }
 
 #inventory-list li:hover {
-    background-color: #4a5a8a;
+    background-color: #63514b;
 }
 
 /* Style for items selected for crafting */
 #inventory-list li.selected {
     border-color: var(--highlight-color);
-    background-color: #5a6a9a;
+    background-color: #72615a;
 }
 
 .display-box {
-    background-color: #0f1320; /* Very dark background for display areas */
+    background-color: #1f1816; /* Very dark background for display areas */
     border: 2px solid var(--text-color);
     padding: 15px;
     min-height: 100px;
@@ -98,7 +100,7 @@ h2 {
 }
 
 .display-box .placeholder {
-    color: #6c7a99;
+    color: #6d6159; /* Muted text color for placeholders */
     font-style: italic;
 }
 
@@ -122,10 +124,11 @@ button {
     padding: 12px;
     cursor: pointer;
     flex-grow: 1; /* Makes buttons in a flex container share space */
+    text-shadow: 1px 1px #000;
 }
 
 button:hover {
-    background-color: #ff6b81;
+    background-color: #e89241; /* Slightly brighter orange on hover */
 }
 
 button:active {
@@ -136,9 +139,9 @@ button:active {
 #btn-clear {
     width: 100%;
     margin-top: 20px;
-    background-color: #6c7a99;
+    background-color: #5a4b45; /* Dark, muted brown for the clear button */
 }
 
 #btn-clear:hover {
-    background-color: #8c9abc;
+    background-color: #72615a;
 }
