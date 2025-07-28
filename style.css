@@ -1,0 +1,144 @@
+/* Import the 8-bit font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* --- Base Styles & Variables --- */
+:root {
+    --bg-color: #1a1a2e; /* Dark blue-purple background */
+    --panel-bg: #16213e; /* Darker blue panel background */
+    --border-color: #e94560; /* Bright magenta for contrast */
+    --text-color: #f1f1f1; /* Off-white text */
+    --highlight-color: #fca311; /* Gold/yellow for highlights */
+    --font-main: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 14px;
+    margin: 0;
+    padding: 20px;
+    image-rendering: pixelated; /* Ensures images look sharp and pixely */
+}
+
+/* --- Layout --- */
+#game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 4px solid var(--border-color);
+    background-color: var(--panel-bg);
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 4px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--highlight-color);
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: var(--border-color);
+    margin-top: 0;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 8px;
+}
+
+#main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.panel {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid var(--text-color);
+}
+
+/* --- Interactive Elements --- */
+#inventory-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    overflow-y: auto;
+}
+
+#inventory-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #2e3b5e;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#inventory-list li:hover {
+    background-color: #4a5a8a;
+}
+
+/* Style for items selected for crafting */
+#inventory-list li.selected {
+    border-color: var(--highlight-color);
+    background-color: #5a6a9a;
+}
+
+.display-box {
+    background-color: #0f1320; /* Very dark background for display areas */
+    border: 2px solid var(--text-color);
+    padding: 15px;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+.display-box .placeholder {
+    color: #6c7a99;
+    font-style: italic;
+}
+
+#result-display h3 {
+    color: var(--highlight-color);
+    margin: 0 0 10px 0;
+}
+
+/* --- Buttons --- */
+#technique-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--border-color);
+    border: 2px solid var(--text-color);
+    padding: 12px;
+    cursor: pointer;
+    flex-grow: 1; /* Makes buttons in a flex container share space */
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+button:active {
+    position: relative;
+    top: 2px;
+}
+
+#btn-clear {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #6c7a99;
+}
+
+#btn-clear:hover {
+    background-color: #8c9abc;
+}
